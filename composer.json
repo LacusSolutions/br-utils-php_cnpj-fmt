@@ -1,7 +1,7 @@
 {
   "name": "lacus/cnpj-fmt",
   "type": "library",
-  "description": "Utility function to format CNPJ (Brazilian employer ID)",
+  "description": "Utility to format CNPJ (Brazilian Business Tax ID)",
   "license": "MIT",
   "authors": [
     {
