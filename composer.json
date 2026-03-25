@@ -45,7 +45,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Lacus\\CnpjFmt\\": "src/"
+      "Lacus\\BrUtils\\Cnpj\\": "src/"
     },
     "files": [
       "src/cnpj-fmt.php"
@@ -53,7 +53,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Lacus\\CnpjFmt\\Tests\\": "tests/"
+      "Lacus\\BrUtils\\Cnpj\\Tests\\": "tests/"
     }
   }
 }

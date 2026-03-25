@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Lacus\CnpjFmt\Tests;
+namespace Lacus\BrUtils\Cnpj\Tests;
 
 use Closure;
-use Lacus\CnpjFmt\CnpjFormatter;
-use Lacus\CnpjFmt\CnpjFormatterOptions;
+use Lacus\BrUtils\Cnpj\CnpjFormatter;
+use Lacus\BrUtils\Cnpj\CnpjFormatterOptions;
 use PHPUnit\Framework\TestCase;
 
 class CnpjFormatterClassTest extends TestCase

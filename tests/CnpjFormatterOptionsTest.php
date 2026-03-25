@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Lacus\CnpjFmt\Tests;
+namespace Lacus\BrUtils\Cnpj\Tests;
 
 use InvalidArgumentException;
-use Lacus\CnpjFmt\CnpjFormatterOptions;
+use Lacus\BrUtils\Cnpj\CnpjFormatterOptions;
 use PHPUnit\Framework\TestCase;
 use TypeError;
 

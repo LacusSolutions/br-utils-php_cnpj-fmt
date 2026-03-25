@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lacus\CnpjFmt;
+namespace Lacus\BrUtils\Cnpj;
 
 use Closure;
 use Exception;

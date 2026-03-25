@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lacus\CnpjFmt\Tests;
+namespace Lacus\BrUtils\Cnpj\Tests;
 
 use Closure;
 use InvalidArgumentException;
