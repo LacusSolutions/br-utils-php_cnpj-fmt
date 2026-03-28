@@ -176,17 +176,17 @@ class CnpjFormatterOptions
      * @param ?bool $escape
      * @param ?bool $encode
      * @param ?Closure(mixed, CnpjFormatterException): string $onFail
-     * @param ?list<CnpjFormatterOptions|array{
-     *     hidden: bool,
-     *     hiddenKey: string,
-     *     hiddenStart: int,
-     *     hiddenEnd: int,
-     *     dotKey: string,
-     *     slashKey: string,
-     *     dashKey: string,
-     *     escape: bool,
-     *     encode: bool,
-     *     onFail: Closure(mixed, CnpjFormatterException): string
+     * @param list<CnpjFormatterOptions|array{
+     *     hidden?: bool|null,
+     *     hiddenKey?: string|null,
+     *     hiddenStart?: int|null,
+     *     hiddenEnd?: int|null,
+     *     dotKey?: string|null,
+     *     slashKey?: string|null,
+     *     dashKey?: string|null,
+     *     escape?: bool|null,
+     *     encode?: bool|null,
+     *     onFail?: (Closure(mixed, CnpjFormatterException): string|null)
      * }|null> $overrides
      *
      * @throws CnpjFormatterOptionsTypeError If any option has an invalid type.
