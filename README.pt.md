@@ -127,7 +127,7 @@ $formatter->format($cnpj);                  // volta aos padrões da instância
 
 **String:** dígitos e/ou letras crus, ou CNPJ já formatado (ex.: `12.345.678/0009-10`, `12.ABC.345/00DE-99`). Caracteres não alfanuméricos são removidos; letras minúsculas viram maiúsculas.
 
-**Array de strings:** cada elemento deve ser string; os valores são concatenados (por dígito, grupos ou misturados com pontuação — tudo é removido na normalização). Elementos que não são string não são permitidos.
+**Array de strings:** cada elemento deve ser string; os valores são concatenados (por dígito, grupos ou misturados com pontuação — tudo é removido na normalização). Elementos que não são strings não são permitidos.
 
 ### Opções de formatação
 
