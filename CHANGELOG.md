@@ -14,7 +14,7 @@
 - **Drop support to PHP v8.1**: Minimum version for the package is now **PHP 8.2** (`^8.2`). It may even run forcedly in earlier versions, but it's not recommended to keep running stale versions of PHP in production.
 - **Input type**: `CnpjFormatter::format()` and `cnpj_fmt()` accept a **string or a list of strings** (arrays are concatenated). Passing a non-string / non–`string[]` value throws **`CnpjFormatterInputTypeError`**. Prior major version only accepted `string`, so no actual change is really needed in this topic.
 - **`onFail` callback** signature is now `Closure(mixed $value, CnpjFormatterException $exception): string`. The default implementation returns an **empty string** on failure; v1 defaulted to returning the **original input string** for invalid length. Length failures are now represented by **`CnpjFormatterInputLengthException`** (not `InvalidArgumentException`).
-- **`CnpjFormatterOptions::merge()`** method no longer exists. Now, to create a new version of `CnpjFormatterOptions` merged with other customized options, just construct a isntance of the class passing the argument **`overrides`**, which accepts an array of options, with the reference instance and the attributes you want to override.
+- **`CnpjFormatterOptions::merge()`** method no longer exists. Now, to create a new version of `CnpjFormatterOptions` merged with other customized options, just construct a instance of the class passing the argument **`overrides`**, which accepts an array of options, with the reference instance and the attributes you want to override.
 - **Options of `CnpjFormatterOptions`** are now accessible as properties, instead of getters and setters.
 - Migrated tests from PhpUnit to **Pest**.
 
