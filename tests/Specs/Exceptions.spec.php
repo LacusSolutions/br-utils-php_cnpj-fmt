@@ -106,7 +106,7 @@ describe('CnpjFormatterInputTypeError', function () {
         it('has the correct name', function () {
             $error = new CnpjFormatterInputTypeError(123, 'string or string[]');
 
-            expect($error->getName())->toEndWith('CnpjFormatterInputTypeError');
+            expect($error->getName())->toBe('CnpjFormatterInputTypeError');
         });
     });
 });
@@ -165,7 +165,7 @@ describe('CnpjFormatterOptionsTypeError', function () {
         it('has the correct name', function () {
             $error = new CnpjFormatterOptionsTypeError('hiddenKey', 123, 'boolean');
 
-            expect($error->getName())->toEndWith('CnpjFormatterOptionsTypeError');
+            expect($error->getName())->toBe('CnpjFormatterOptionsTypeError');
         });
     });
 });
@@ -248,7 +248,7 @@ describe('CnpjFormatterInputLengthException', function () {
         it('has the correct name', function () {
             $exception = new CnpjFormatterInputLengthException('1.2.3.4.5', '12345', 14);
 
-            expect($exception->getName())->toEndWith('CnpjFormatterInputLengthException');
+            expect($exception->getName())->toBe('CnpjFormatterInputLengthException');
         });
     });
 });
@@ -306,7 +306,7 @@ describe('CnpjFormatterOptionsHiddenRangeInvalidException', function () {
         it('has the correct name', function () {
             $exception = new CnpjFormatterOptionsHiddenRangeInvalidException('hiddenStart', 123, 0, 13);
 
-            expect($exception->getName())->toEndWith('CnpjFormatterOptionsHiddenRangeInvalidException');
+            expect($exception->getName())->toBe('CnpjFormatterOptionsHiddenRangeInvalidException');
         });
     });
 });
@@ -357,7 +357,7 @@ describe('CnpjFormatterOptionsForbiddenKeyCharacterException', function () {
         it('has the correct name', function () {
             $exception = new CnpjFormatterOptionsForbiddenKeyCharacterException('hiddenKey', 'x', ['x']);
 
-            expect($exception->getName())->toEndWith('CnpjFormatterOptionsForbiddenKeyCharacterException');
+            expect($exception->getName())->toBe('CnpjFormatterOptionsForbiddenKeyCharacterException');
         });
     });
 });

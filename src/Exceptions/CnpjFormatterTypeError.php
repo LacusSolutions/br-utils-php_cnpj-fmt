@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Lacus\BrUtils\Cnpj\Exceptions;
 
+use ReflectionClass;
 use TypeError;
 
 /**
@@ -35,6 +36,8 @@ abstract class CnpjFormatterTypeError extends TypeError
      */
     public function getName(): string
     {
-        return static::class;
+        $thisReflection = new ReflectionClass($this);
+
+        return $thisReflection->getShortName();
     }
 }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Lacus\BrUtils\Cnpj\Exceptions;
 
 use Exception;
+use ReflectionClass;
 
 /**
  * Base exception for all `cnpj-fmt` rules-related errors.
@@ -26,6 +27,8 @@ abstract class CnpjFormatterException extends Exception
      */
     public function getName(): string
     {
-        return static::class;
+        $thisReflection = new ReflectionClass($this);
+
+        return $thisReflection->getShortName();
     }
 }
