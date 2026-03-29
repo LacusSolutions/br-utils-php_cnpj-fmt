@@ -125,7 +125,6 @@ describe('CnpjFormatterOptionsTypeError', function () {
             expect($error)->toBeInstanceOf(CnpjFormatterTypeError::class);
         });
 
-
         it('sets the `optionName` property', function () {
             $error = new CnpjFormatterOptionsTypeError('hiddenKey', 123, 'boolean');
 
