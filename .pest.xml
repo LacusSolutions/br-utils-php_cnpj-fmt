@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
   bootstrap="vendor/autoload.php"
-  cacheDirectory="vendor/.phpunit.cache/"
+  cacheDirectory="vendor/.pest.cache/"
   beStrictAboutOutputDuringTests="true"
   colors="true"
   failOnRisky="true"
@@ -28,6 +28,6 @@
     <env name="APP_ENV" value="testing"/>
   </php>
   <logging>
-    <junit outputFile="vendor/.phpunit.cache/test-results.xml"/>
+    <junit outputFile="vendor/.pest.cache/test-results.xml"/>
   </logging>
 </phpunit>

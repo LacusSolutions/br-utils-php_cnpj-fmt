@@ -26,9 +26,19 @@
   },
   "homepage": "https://cnpj-utils.vercel.app/",
   "scripts": {
-    "test": "pest",
-    "test:watch": "pest --watch",
-    "test-coverage": "pest --coverage-html coverage"
+    "lint": [
+      "@lint:format",
+      "@lint:check"
+    ],
+    "lint:ci": [
+      "@lint:format --dry-run --diff",
+      "@lint:check --no-progress"
+    ],
+    "lint:format": "php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php",
+    "lint:check": "phpstan analyse --configuration=.phpstan.neon",
+    "test": "pest --configuration=.pest.xml",
+    "test:watch": "@test --watch",
+    "test:cov": "@test --coverage-html coverage"
   },
   "config": {
     "sort-packages": true,
@@ -41,7 +51,9 @@
     "lacus/utils": "^1.0"
   },
   "require-dev": {
-    "pestphp/pest": "^3.8"
+    "friendsofphp/php-cs-fixer": "^3.94",
+    "pestphp/pest": "^3.8",
+    "phpstan/phpstan": "^2.1"
   },
   "autoload": {
     "psr-4": {
