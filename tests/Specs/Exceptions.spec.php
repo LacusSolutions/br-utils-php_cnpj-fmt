@@ -345,10 +345,9 @@ describe('CnpjFormatterOptionsForbiddenKeyCharacterException', function () {
         it('has the correct message', function () {
             $optionName = 'hiddenKey';
             $actualInput = 'x';
-            $forbiddenCharacters = ['x'];
-            $message = "Value \"{$actualInput}\" for CNPJ formatting option \"{$optionName}\" contains disallowed characters (\"{$forbiddenCharacters[0]}\").";
-
-            $exception = new CnpjFormatterOptionsForbiddenKeyCharacterException($optionName, $actualInput, $forbiddenCharacters);
+            $forbiddenCharacters = implode('", "', ['x', 'Y']);
+            $message = "Value \"{$actualInput}\" for CNPJ formatting option \"{$optionName}\" contains disallowed characters (\"{$forbiddenCharacters}\").";
+            $exception = new CnpjFormatterOptionsForbiddenKeyCharacterException($optionName, $actualInput, ['x', 'Y']);
 
             expect($exception->getMessage())->toBe($message);
         });
