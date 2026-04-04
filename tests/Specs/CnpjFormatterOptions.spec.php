@@ -65,7 +65,7 @@ describe('CnpjFormatterOptions', function () {
                     'escape' => true,
                     'encode' => true,
                     'onFail' => function (mixed $value): string {
-                        return "ERROR: {$value}";
+                        return 'ERROR: ' . strval($value);
                     },
                 ];
 
@@ -758,7 +758,7 @@ describe('CnpjFormatterOptions', function () {
         describe('when setting to a callable value', function () {
             it('sets `onFail` to the provided callback', function () {
                 $callback = function (mixed $value, CnpjFormatterException $e): string {
-                    return "ERROR: {$value}";
+                    return 'ERROR: ' . strval($value);
                 };
                 $options = new CnpjFormatterOptions();
 
@@ -771,7 +771,7 @@ describe('CnpjFormatterOptions', function () {
         describe('when setting to a nullish value', function () use ($defaultParameters) {
             it('sets default callback for `null`', function () use ($defaultParameters) {
                 $callback = function (mixed $value, CnpjFormatterException $e): string {
-                    return "ERROR: {$value}";
+                    return 'ERROR: ' . strval($value);
                 };
                 $options = new CnpjFormatterOptions(onFail: $callback);
 

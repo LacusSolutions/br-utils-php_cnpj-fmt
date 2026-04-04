@@ -247,13 +247,17 @@ class CnpjFormatter
         }
 
         if (is_array($cnpjInput)) {
+            $joined = '';
+
             foreach ($cnpjInput as $item) {
                 if (!is_string($item)) {
                     throw new CnpjFormatterInputTypeError($cnpjInput, 'string or string[]');
                 }
+
+                $joined .= $item;
             }
 
-            return implode('', $cnpjInput);
+            return $joined;
         }
 
         throw new CnpjFormatterInputTypeError($cnpjInput, 'string or string[]');

@@ -249,17 +249,17 @@ class CnpjFormatterOptions
     public function __get(string $name): mixed
     {
         return match ($name) {
-            'hidden' => $this->getHidden(),
-            'hiddenKey' => $this->getHiddenKey(),
+            'hidden'      => $this->getHidden(),
+            'hiddenKey'   => $this->getHiddenKey(),
             'hiddenStart' => $this->getHiddenStart(),
-            'hiddenEnd' => $this->getHiddenEnd(),
-            'dotKey' => $this->getDotKey(),
-            'slashKey' => $this->getSlashKey(),
-            'dashKey' => $this->getDashKey(),
-            'escape' => $this->getEscape(),
-            'encode' => $this->getEncode(),
-            'onFail' => $this->getOnFail(),
-            default => throw new InvalidArgumentException("Unknown property: {$name}"),
+            'hiddenEnd'   => $this->getHiddenEnd(),
+            'dotKey'      => $this->getDotKey(),
+            'slashKey'    => $this->getSlashKey(),
+            'dashKey'     => $this->getDashKey(),
+            'escape'      => $this->getEscape(),
+            'encode'      => $this->getEncode(),
+            'onFail'      => $this->getOnFail(),
+            default       => throw new InvalidArgumentException("Unknown property: {$name}"),
         };
     }
 
@@ -269,17 +269,17 @@ class CnpjFormatterOptions
     public function __set(string $name, mixed $value): void
     {
         match ($name) {
-            'hidden' => $this->setHidden($value),           // @phpstan-ignore-line argument.type
-            'hiddenKey' => $this->setHiddenKey($value),     // @phpstan-ignore-line method.notFound
+            'hidden'      => $this->setHidden($value),      // @phpstan-ignore-line argument.type
+            'hiddenKey'   => $this->setHiddenKey($value),   // @phpstan-ignore-line method.notFound
             'hiddenStart' => $this->setHiddenStart($value), // @phpstan-ignore-line method.notFound
-            'hiddenEnd' => $this->setHiddenEnd($value),     // @phpstan-ignore-line method.notFound
-            'dotKey' => $this->setDotKey($value),           // @phpstan-ignore-line method.notFound
-            'slashKey' => $this->setSlashKey($value),       // @phpstan-ignore-line method.notFound
-            'dashKey' => $this->setDashKey($value),         // @phpstan-ignore-line method.notFound
-            'escape' => $this->setEscape($value),           // @phpstan-ignore-line argument.type
-            'encode' => $this->setEncode($value),           // @phpstan-ignore-line argument.type
-            'onFail' => $this->setOnFail($value),           // @phpstan-ignore-line argument.type
-            default => throw new InvalidArgumentException("Unknown property: {$name}"),
+            'hiddenEnd'   => $this->setHiddenEnd($value),   // @phpstan-ignore-line method.notFound
+            'dotKey'      => $this->setDotKey($value),      // @phpstan-ignore-line method.notFound
+            'slashKey'    => $this->setSlashKey($value),    // @phpstan-ignore-line method.notFound
+            'dashKey'     => $this->setDashKey($value),     // @phpstan-ignore-line method.notFound
+            'escape'      => $this->setEscape($value),      // @phpstan-ignore-line argument.type
+            'encode'      => $this->setEncode($value),      // @phpstan-ignore-line argument.type
+            'onFail'      => $this->setOnFail($value),      // @phpstan-ignore-line argument.type
+            default       => throw new InvalidArgumentException("Unknown property: {$name}"),
         };
     }
 
